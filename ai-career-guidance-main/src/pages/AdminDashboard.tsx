@@ -18,7 +18,7 @@ const AdminDashboard = () => {
     if (!user || user.role !== "admin") { navigate("/login"); return; }
     setStudents(getAllStudents());
     setProfiles(getAllProfiles());
-  }, [user]);
+  }, [user, getAllStudents, getAllProfiles, navigate]);
 
   const handleLogout = () => { logout(); navigate("/"); };
 

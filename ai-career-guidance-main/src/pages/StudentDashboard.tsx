@@ -35,7 +35,7 @@ const StudentDashboard = () => {
       setEducation(p.education);
       setProfile(p);
     }
-  }, [user]);
+  }, [user, getProfile, marks, navigate]);
 
   const handleSave = () => {
     if (!user) return;
