@@ -30,7 +30,7 @@ const TeamSection = () => (
   <section id="team" className="py-24">
     <div className="container mx-auto px-6">
       <SectionHeading title="Team Members" subtitle="Section A — Semester 6" />
-      <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
         {members.map((m, i) => {
           const Icon = m.icon;
           return (
@@ -39,13 +39,13 @@ const TeamSection = () => (
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="card-gradient border border-border rounded-2xl p-8 text-center hover:border-primary/40 transition-all glow-box group"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="card-gradient border border-border rounded-xl p-5 text-center hover:border-primary/40 transition-all glow-box group flex flex-col h-full justify-between"
             >
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
-                <Icon className="w-9 h-9 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform flex-shrink-0">
+                <Icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-1">{m.name}</h3>
+              <h3 className="text-lg font-bold text-foreground mb-1 flex-1">{m.name}</h3>
               <p className="text-xs font-mono text-muted-foreground mb-3">{m.roll}</p>
               <p className="text-primary font-medium text-sm mb-1">{m.role}</p>
               <p className="text-muted-foreground text-xs">{m.extra}</p>
